@@ -70,7 +70,7 @@ En la colonia de hormigas los rastros de feromona corresponden a la probabilidad
 
 Dado que el método de colonia de hormigas cuenta con una memoría que almacena información de los caminos recorridos, la cual puede ser utilizada para construir soluciones válidas, evaluar la solución generada y reconstruir el camino que han seguido las hormigas, por lo tanto, este obtiene una mejor solución con el menor costo en comparación al algorirmo genético.
 
-En el archivo [MAPA](MAPA.gif) se encuentra el recorrido ontenido mediante el método de colonia de hormigas.
+En el archivo [MAPA](MAPA.gif) se encuentra el recorrido obtenido mediante el método de colonia de hormigas.
 
 ### 3. Referencias
 
