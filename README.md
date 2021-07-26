@@ -55,10 +55,22 @@ Asimismo, para efectos de cálcular la duración de los viajes de acuerdo a las 
 
 **1.1.4. Peajes y distancias:**
 
-Las distancias entre ciudades fueron tomadas de google.maps mientras que los costos de peajes
+Las distancias entre ciudades fueron tomadas de la aplicación google.maps mientras que los costos de peajes fueron consultados en la web (en páginas como: www.viajaporcolombia.com/, www.motor.com.co y https://peajescolombia.com)
 
 ### 2. Resultados
 
+De acuerdo a los resultados del [Algoritmo genético](2.1. Agortimo_genetico.py) y [Colonia de hormigas](2.2. Colonia_hormigas.py), se observa que con el primero se obtuvo una función de costo de $ 4.484.355 con un recorrido que recorre las ciudades en el siguiente orden: Armenia - Valledupar - Cucutá - Cartagena - Soledad - Barranquilla - Bucaramanga - Pasto - Tulúa - Pereira - Medellín - Motería - Caldas - Bogotá - Palmira - Armenia. Mientras que con el algoritmo de colonia de hormigas se obtiene un costo total de $ 2.420.132 con un recorrido en el siguiente orden: Pereira - Armenia - Tulúa - Palmira - Pasto - Cucutá - Bucaramanga - Valledupar - Barranquilla - Soledad - Cartagena - Monteria - Medellín - Caldas - Bogotá - Pereira.
+
+Con base en los costos, se puede decir que el mejor rendimiento se obtiene con la utilización del algortimo de colonia de hormigas, el cual fue obtenido con los siguientes parámetros:
+- Número de hormigas: 15
+- Factor de importancia de las feromonas: 1
+- Facto de importancia de los datos de la función heurística: 3
+- Tasa de evaporación de las feromonas: 0.3
+En la colonia de hormigas los rastros de feromona corresponden a la probabilidad o deseabilidad de visitar una ciudad x después de visitar una ciudad y. De esta forma, se obtiene una función que representa la distancia recorrida y que se puede optimizar mediante un conjunto de permutaciones.
+
+Dado que el método de colonia de hormigas cuenta con una memoría que almacena información de los caminos recorridos, la cual puede ser utilizada para construir soluciones válidas, evaluar la solución generada y reconstruir el camino que han seguido las hormigas, por lo tanto, este obtiene una mejor solución con el menor costo en comparación al algorirmo genético.
+
+En el archivo [MAPA](MAPA.gif) se encuentra el recorrido ontenido mediante el método de colonia de hormigas.
 
 ### 3. Referencias
 
@@ -67,3 +79,7 @@ https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algori
 http://www.jcreview.com/fulltext/197-1578037726.pdf?1578371869
 
 https://towardsdatascience.com/using-ant-colony-and-genetic-evolution-to-optimize-ride-sharing-trip-duration-56194215923f
+
+Robles Algarín, C. A. (2010). Optimización por colonia de hormigas: aplicaciones y tendencias. Ingenieria Solidaria Volumen 6, 83-89.
+
+
